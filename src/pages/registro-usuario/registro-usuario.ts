@@ -30,23 +30,21 @@ export class RegistroUsuarioPage {
     console.log('Hello RegistroUsuarioPage Page');
   }
 
-  reg(){
-    let headers = new Headers({
-			'Content-Type': 'application/x-www-form-urlencoded'
-		});
-		let options = new RequestOptions({
-			headers: headers
-		});
-		let body = 'user[nombre]=' + this.nombre + '&user[rut]=' + this.rut + '&user[email]=' + this.email + '&user[password]=' + this.password;
+  regUser() {
+    let body = 'user[nombre]=' + this.nombre + '&user[rut]=' + this.rut + '&user[email]=' + this.email + '&user[password]=' + this.password;
+    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
+    let options = new RequestOptions({ headers: headers });
 
-		return this.http.post(SERVER_URL + 'registro.json', body, options)
-			.toPromise()
-			.then(response => {return response.json()}, this.handleError);
-  }
-
-  handleError(error) {
-		console.log(error);
-		return error.json().message || 'Error en el Servidor, intente de nuevo mas tarde';
-	}
-
+    this.http
+        .post(SERVER_URL + 'registro.json', body, options)
+        .map(res => res.json())
+        .subscribe(
+            data => {
+              console.log(data);
+            },
+            err => {
+              console.log("ERROR!: ", err);
+            }
+        );
+    }
 }

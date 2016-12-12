@@ -279,7 +279,6 @@ class _View_Page10 extends import1.AppView<import0.Page1> {
     ,(null as any));
     this._text_27 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
-    var disposable_0:Function = this.renderer.listen(this._el_22,'click',this.eventHandler(this._handle_click_22_0.bind(this)));
     this.init(([] as any[]),[
       this._el_0,
       this._text_1,
@@ -310,7 +309,7 @@ class _View_Page10 extends import1.AppView<import0.Page1> {
       this._text_26,
       this._text_27
     ]
-    ,[disposable_0],([] as any[]));
+    ,([] as any[]),([] as any[]));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
@@ -348,8 +347,8 @@ class _View_Page10 extends import1.AppView<import0.Page1> {
     const currVal_5:any = '';
     this._Button_19_4.check_block(currVal_5,throwOnChange,false);
     if (this._Button_19_4.detectChangesInternal(this,this._el_19,throwOnChange)) { this._appEl_19.componentView.markAsCheckOnce(); }
-    const currVal_7:any = '';
-    this._Button_22_4.check_block(currVal_7,throwOnChange,false);
+    const currVal_6:any = '';
+    this._Button_22_4.check_block(currVal_6,throwOnChange,false);
     if (this._Button_22_4.detectChangesInternal(this,this._el_22,throwOnChange)) { this._appEl_22.componentView.markAsCheckOnce(); }
     this.detectContentChildrenChanges(throwOnChange);
     if (!throwOnChange) {
@@ -391,11 +390,6 @@ class _View_Page10 extends import1.AppView<import0.Page1> {
     this._TextInput_10_4.context.ngOnDestroy();
     this._TextInput_15_4.context.ngOnDestroy();
     this._Content_4_4.context.ngOnDestroy();
-  }
-  private _handle_click_22_0($event:any):boolean {
-    this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this.context.openPage()) !== false);
-    return (true && pd_0);
   }
 }
 export function viewFactory_Page10(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<import0.Page1> {

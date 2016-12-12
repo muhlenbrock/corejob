@@ -10,8 +10,9 @@ export class Page1 {
 
   constructor(public navCtrl: NavController) {}
 
+/*
   openPage(){
     this.navCtrl.push(RegistroUsuarioPage);
   }
-
+*/
 }

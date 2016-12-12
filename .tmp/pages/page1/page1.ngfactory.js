@@ -225,7 +225,6 @@ var _View_Page10 = (function (_super) {
         ], null);
         this._text_27 = this.renderer.createText(parentRenderNode, '\n', null);
         this._expr_0 = import7.UNINITIALIZED;
-        var disposable_0 = this.renderer.listen(this._el_22, 'click', this.eventHandler(this._handle_click_22_0.bind(this)));
         this.init([], [
             this._el_0,
             this._text_1,
@@ -255,7 +254,7 @@ var _View_Page10 = (function (_super) {
             this._el_25,
             this._text_26,
             this._text_27
-        ], [disposable_0], []);
+        ], [], []);
         return null;
     };
     _View_Page10.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
@@ -323,8 +322,8 @@ var _View_Page10 = (function (_super) {
         if (this._Button_19_4.detectChangesInternal(this, this._el_19, throwOnChange)) {
             this._appEl_19.componentView.markAsCheckOnce();
         }
-        var currVal_7 = '';
-        this._Button_22_4.check_block(currVal_7, throwOnChange, false);
+        var currVal_6 = '';
+        this._Button_22_4.check_block(currVal_6, throwOnChange, false);
         if (this._Button_22_4.detectChangesInternal(this, this._el_22, throwOnChange)) {
             this._appEl_22.componentView.markAsCheckOnce();
         }
@@ -376,11 +375,6 @@ var _View_Page10 = (function (_super) {
         this._TextInput_10_4.context.ngOnDestroy();
         this._TextInput_15_4.context.ngOnDestroy();
         this._Content_4_4.context.ngOnDestroy();
-    };
-    _View_Page10.prototype._handle_click_22_0 = function ($event) {
-        this.markPathToRootAsCheckOnce();
-        var pd_0 = (this.context.openPage() !== false);
-        return (true && pd_0);
     };
     return _View_Page10;
 }(import1.AppView));
