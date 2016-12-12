@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario';
+import { DetailPagePage } from '../pages/detail-page/detail-page';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -13,7 +14,8 @@ export var AppModule = (function () {
                         MyApp,
                         Page1,
                         Page2,
-                        RegistroUsuarioPage
+                        RegistroUsuarioPage,
+                        DetailPagePage
                     ],
                     imports: [
                         IonicModule.forRoot(MyApp)
@@ -23,7 +25,8 @@ export var AppModule = (function () {
                         MyApp,
                         Page1,
                         Page2,
-                        RegistroUsuarioPage
+                        RegistroUsuarioPage,
+                        DetailPagePage
                     ],
                     providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
                 },] },

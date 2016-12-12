@@ -24,6 +24,13 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.corejob455560"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "com.ionicframework.corejob455560"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "323182061664",
+            "PACKAGE_NAME": "com.ionicframework.corejob455560"
         }
     },
     "dependent_plugins": {}
