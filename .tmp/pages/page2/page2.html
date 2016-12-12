@@ -3,21 +3,44 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page Two</ion-title>
+    <ion-title>Perfil</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
+    <ion-item>
+      <ion-label color="primary" stacked>Id: {{userid}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Rut: {{rut}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Nombre: {{nombre}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Apellidos: {{apaterno}} {{amaterno}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Email: {{email}} </ion-label>
+    </ion-item>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Notificaciones </ion-label>
+    </ion-item>
+    <ion-item>
+      <p> Ha sido nitidficado para el proyecto,</p>
+      <p> favor de confirmar participación </p>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Notificado</ion-label>
+    </ion-item>
+    <ion-item>
+      <button ion-button color="danger">Rechazar</button>
+      <button ion-button color="secondary">Confirmar</button>
+    </ion-item>
+  </ion-list>
 </ion-content>

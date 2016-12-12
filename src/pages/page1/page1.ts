@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Page2 } from '../page2/page2';
 import { RegistroUsuarioPage } from '../registro-usuario/registro-usuario';
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
@@ -23,6 +24,7 @@ export class Page1 {
   }
 
   doLogin() {
+
     let body = 'user[email]=' + this.usuario + '&user[password]=' + this.password;
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
     let options = new RequestOptions({ headers: headers });
@@ -33,6 +35,7 @@ export class Page1 {
         .subscribe(
             data => {
               console.log(data);
+              this.navCtrl.push(Page2, { userid: data.user, token: data.token});
             },
             err => {
               console.log("ERROR!: ", err);
