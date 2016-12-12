@@ -893,7 +893,7 @@ var _View_RegistroUsuarioPage0 = (function (_super) {
     };
     _View_RegistroUsuarioPage0.prototype._handle_click_49_0 = function ($event) {
         this.markPathToRootAsCheckOnce();
-        var pd_0 = (this.context.reg() !== false);
+        var pd_0 = (this.context.regUser() !== false);
         return (true && pd_0);
     };
     return _View_RegistroUsuarioPage0;

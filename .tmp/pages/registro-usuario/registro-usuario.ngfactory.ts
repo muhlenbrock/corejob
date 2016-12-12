@@ -945,7 +945,7 @@ class _View_RegistroUsuarioPage0 extends import1.AppView<import0.RegistroUsuario
   }
   private _handle_click_49_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this.context.reg()) !== false);
+    const pd_0:any = ((<any>this.context.regUser()) !== false);
     return (true && pd_0);
   }
 }

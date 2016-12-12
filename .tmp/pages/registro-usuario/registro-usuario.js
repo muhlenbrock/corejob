@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 var SERVER_URL = 'http://api.corejob.cl/';
 /*
@@ -17,21 +16,18 @@ export var RegistroUsuarioPage = (function () {
     RegistroUsuarioPage.prototype.ionViewDidLoad = function () {
         console.log('Hello RegistroUsuarioPage Page');
     };
-    RegistroUsuarioPage.prototype.reg = function () {
-        var headers = new Headers({
-            'Content-Type': 'application/x-www-form-urlencoded'
-        });
-        var options = new RequestOptions({
-            headers: headers
-        });
+    RegistroUsuarioPage.prototype.regUser = function () {
         var body = 'user[nombre]=' + this.nombre + '&user[rut]=' + this.rut + '&user[email]=' + this.email + '&user[password]=' + this.password;
-        return this.http.post(SERVER_URL + 'registro.json', body, options)
-            .toPromise()
-            .then(function (response) { return response.json(); }, this.handleError);
-    };
-    RegistroUsuarioPage.prototype.handleError = function (error) {
-        console.log(error);
-        return error.json().message || 'Error en el Servidor, intente de nuevo mas tarde';
+        var headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        var options = new RequestOptions({ headers: headers });
+        this.http
+            .post(SERVER_URL + 'registro.json', body, options)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) {
+            console.log(data);
+        }, function (err) {
+            console.log("ERROR!: ", err);
+        });
     };
     RegistroUsuarioPage.decorators = [
         { type: Component, args: [{

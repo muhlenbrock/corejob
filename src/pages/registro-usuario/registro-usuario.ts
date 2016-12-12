@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-//import { NavController } from 'ionic-angular';
-//import { Injectable } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 
 const SERVER_URL = 'http://api.corejob.cl/';
