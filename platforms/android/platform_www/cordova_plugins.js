@@ -50,8 +50,8 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "4.0.0",
     "cordova-plugin-statusbar": "2.2.0",
     "cordova-plugin-whitelist": "1.3.0",
-    "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-wkwebview-engine": "1.1.1-dev",
+    "ionic-plugin-keyboard": "2.2.1",
     "phonegap-plugin-push": "1.8.2"
 };
 // BOTTOM OF METADATA

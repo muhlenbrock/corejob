@@ -1,11 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, AlertController } from 'ionic-angular';
 import { StatusBar, Push, Splashscreen } from 'ionic-native';
+import { Injectable } from '@angular/core';
+import { Http, Headers, RequestOptions } from '@angular/http';
+import 'rxjs/Rx';
 
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario';
 import { DetailPagePage } from '../pages/detail-page/detail-page';
+
+const SERVER_URL = 'http://api.corejob.cl/';
 
 
 @Component({
@@ -18,7 +23,9 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public alertCtrl: AlertController) {
+  constructor(public platform: Platform,
+              public alertCtrl: AlertController,
+              public http: Http) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -50,6 +57,25 @@ export class MyApp {
           push.on('registration', (data) => {
             console.log("device token ->", data.registrationId);
             //TODO - send device token to server
+
+            /////
+            let body = 'user[id]=15' + '&user[registrationid]=' + data.registrationId;
+            let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
+            let options = new RequestOptions({ headers: headers });
+
+            this.http
+                .patch(SERVER_URL + 'usuarios/15', body, options)
+                .map(res => res.json())
+                .subscribe(
+                    data => {
+                      console.log(data);
+                    },
+                    err => {
+                      console.log("ERROR! api usuario: ", err);
+                    }
+                );
+
+            /////
           });
           push.on('notification', (data) => {
             console.log('message', data.message);

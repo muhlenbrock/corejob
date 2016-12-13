@@ -22,10 +22,10 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.corejob455560"
         },
-        "ionic-plugin-keyboard": {
+        "cordova-plugin-wkwebview-engine": {
             "PACKAGE_NAME": "com.ionicframework.corejob455560"
         },
-        "cordova-plugin-wkwebview-engine": {
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.corejob455560"
         },
         "phonegap-plugin-push": {
