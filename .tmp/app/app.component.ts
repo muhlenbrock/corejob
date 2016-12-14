@@ -3,6 +3,7 @@ import { Nav, Platform, AlertController } from 'ionic-angular';
 import { StatusBar, Push, Splashscreen } from 'ionic-native';
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { Global } from '../providers/global';
 import 'rxjs/Rx';
 
 import { Page1 } from '../pages/page1/page1';
@@ -17,6 +18,7 @@ const SERVER_URL = 'http://api.corejob.cl/';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = Page1;
@@ -25,7 +27,8 @@ export class MyApp {
 
   constructor(public platform: Platform,
               public alertCtrl: AlertController,
-              public http: Http) {
+              public http: Http,
+              public global: Global) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -54,65 +57,43 @@ export class MyApp {
             windows: {}
           });
 
-          push.on('registration', (data) => {
-            console.log("device token ->", data.registrationId);
-            //TODO - send device token to server
-
-            /////
-            let body = 'user[id]=15' + '&user[registrationid]=' + data.registrationId;
-            let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
-            let options = new RequestOptions({ headers: headers });
-
-            this.http
-                .patch(SERVER_URL + 'usuarios/15', body, options)
-                .map(res => res.json())
-                .subscribe(
-                    data => {
-                      console.log(data);
-                    },
-                    err => {
-                      console.log("ERROR! api usuario: ", err);
+            push.on('registration', (data) => {
+              console.log("device token ->", data.registrationId);
+              //TODO - send device token to server
+              global.setRegistrationIdVar(data.registrationId);
+            });
+            push.on('notification', (data) => {
+              console.log('message', data.message);
+              let self = this;
+              //if user using app and push notification comes
+              if (data.additionalData.foreground) {
+                // if application open, show popup
+                let confirmAlert = this.alertCtrl.create({
+                  title: data.title,
+                  message: data.message,
+                  buttons: [{
+                    text: 'Ignorar',
+                    role: 'cancel'
+                  }, {
+                    text: 'Ver',
+                    handler: () => {
+                      //TODO: Your logic here
+                      self.nav.push(DetailPagePage, {message: data.message,title: data.title});
                     }
-                );
-
-            /////
-          });
-          push.on('notification', (data) => {
-            console.log('message', data.message);
-            let self = this;
-            //if user using app and push notification comes
-            if (data.additionalData.foreground) {
-              // if application open, show popup
-              let confirmAlert = this.alertCtrl.create({
-                title: data.title,
-                message: data.message,
-                buttons: [{
-                  text: 'Ignorar',
-                  role: 'cancel'
-                }, {
-                  text: 'Ver',
-                  handler: () => {
-                    //TODO: Your logic here
-                    self.nav.push(DetailPagePage, {message: data.message,title: data.title});
-                  }
-                }]
-              });
-              confirmAlert.present();
-            } else {
-              //if user NOT using app and push notification comes
-              //TODO: Your logic on click of push notification directly
-              self.nav.push(DetailPagePage, {message: data.message, title: data.title});
-              console.log("Push notification clicked");
-            }
-          });
-          push.on('error', (e) => {
-            console.log(e.message);
-          });
+                  }]
+                });
+                confirmAlert.present();
+              } else {
+                //if user NOT using app and push notification comes
+                //TODO: Your logic on click of push notification directly
+                self.nav.push(DetailPagePage, {message: data.message, title: data.title});
+                console.log("Push notification clicked");
+              }
+            });
+            push.on('error', (e) => {
+              console.log(e.message);
+            });
         });
-
-
-
-
   }
 
   initializeApp() {
@@ -129,5 +110,6 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
 
 }

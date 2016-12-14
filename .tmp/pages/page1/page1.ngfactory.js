@@ -16,41 +16,42 @@ import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
 import * as import9 from '@angular/http/src/http';
-import * as import10 from '@angular/core/src/metadata/view';
-import * as import11 from '@angular/core/src/linker/component_factory';
-import * as import12 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
-import * as import13 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import14 from '../../node_modules/ionic-angular/components/list/list.ngfactory';
-import * as import15 from '../../node_modules/ionic-angular/components/item/item.ngfactory';
-import * as import16 from '@angular/core/src/linker/query_list';
-import * as import17 from '../../node_modules/@angular/forms/src/directives/ng_model.ngfactory';
-import * as import18 from '../../node_modules/@angular/forms/src/directives/ng_control_status.ngfactory';
-import * as import19 from '../../node_modules/ionic-angular/components/input/input.ngfactory';
-import * as import20 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
-import * as import21 from 'ionic-angular/config/config';
-import * as import22 from '@angular/core/src/linker/element_ref';
-import * as import23 from 'ionic-angular/navigation/view-controller';
-import * as import24 from 'ionic-angular/components/app/app';
-import * as import25 from 'ionic-angular/util/keyboard';
-import * as import26 from '@angular/core/src/zone/ng_zone';
-import * as import27 from 'ionic-angular/components/tabs/tabs';
-import * as import28 from 'ionic-angular/gestures/gesture-controller';
-import * as import29 from 'ionic-angular/util/form';
-import * as import30 from 'ionic-angular/components/item/item-reorder';
-import * as import31 from 'ionic-angular/platform/platform';
-import * as import32 from 'ionic-angular/components/toolbar/toolbar';
-import * as import33 from '@angular/forms/src/directives/ng_model';
-import * as import34 from '@angular/forms/src/directives/ng_control';
-import * as import35 from '@angular/forms/src/directives/ng_control_status';
-import * as import36 from 'ionic-angular/components/input/input';
-import * as import37 from 'ionic-angular/components/item/item';
-import * as import38 from 'ionic-angular/components/list/list';
-import * as import39 from 'ionic-angular/components/button/button';
-import * as import40 from 'ionic-angular/components/content/content';
+import * as import10 from '../../providers/global';
+import * as import11 from '@angular/core/src/metadata/view';
+import * as import12 from '@angular/core/src/linker/component_factory';
+import * as import13 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
+import * as import14 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import15 from '../../node_modules/ionic-angular/components/list/list.ngfactory';
+import * as import16 from '../../node_modules/ionic-angular/components/item/item.ngfactory';
+import * as import17 from '@angular/core/src/linker/query_list';
+import * as import18 from '../../node_modules/@angular/forms/src/directives/ng_model.ngfactory';
+import * as import19 from '../../node_modules/@angular/forms/src/directives/ng_control_status.ngfactory';
+import * as import20 from '../../node_modules/ionic-angular/components/input/input.ngfactory';
+import * as import21 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
+import * as import22 from 'ionic-angular/config/config';
+import * as import23 from '@angular/core/src/linker/element_ref';
+import * as import24 from 'ionic-angular/navigation/view-controller';
+import * as import25 from 'ionic-angular/components/app/app';
+import * as import26 from 'ionic-angular/util/keyboard';
+import * as import27 from '@angular/core/src/zone/ng_zone';
+import * as import28 from 'ionic-angular/components/tabs/tabs';
+import * as import29 from 'ionic-angular/gestures/gesture-controller';
+import * as import30 from 'ionic-angular/util/form';
+import * as import31 from 'ionic-angular/components/item/item-reorder';
+import * as import32 from 'ionic-angular/platform/platform';
+import * as import33 from 'ionic-angular/components/toolbar/toolbar';
+import * as import34 from '@angular/forms/src/directives/ng_model';
+import * as import35 from '@angular/forms/src/directives/ng_control';
+import * as import36 from '@angular/forms/src/directives/ng_control_status';
+import * as import37 from 'ionic-angular/components/input/input';
+import * as import38 from 'ionic-angular/components/item/item';
+import * as import39 from 'ionic-angular/components/list/list';
+import * as import40 from 'ionic-angular/components/button/button';
+import * as import41 from 'ionic-angular/components/content/content';
 export var Wrapper_Page1 = (function () {
-    function Wrapper_Page1(p0, p1) {
+    function Wrapper_Page1(p0, p1, p2) {
         this.changed = false;
-        this.context = new import0.Page1(p0, p1);
+        this.context = new import0.Page1(p0, p1, p2);
     }
     Wrapper_Page1.prototype.detectChangesInternal = function (view, el, throwOnChange) {
         var changed = this.changed;
@@ -69,7 +70,7 @@ var _View_Page1_Host0 = (function (_super) {
         this._el_0 = this.selectOrCreateHostElement('page-page1', rootSelector, null);
         this._appEl_0 = new import3.AppElement(0, null, this, this._el_0);
         var compView_0 = viewFactory_Page10(this.viewUtils, this.injector(0), this._appEl_0);
-        this._Page1_0_4 = new Wrapper_Page1(this.parentInjector.get(import8.NavController), this.parentInjector.get(import9.Http));
+        this._Page1_0_4 = new Wrapper_Page1(this.parentInjector.get(import8.NavController), this.parentInjector.get(import9.Http), this.parentInjector.get(import10.Global));
         this._appEl_0.initComponent(this._Page1_0_4.context, [], compView_0);
         compView_0.create(this._Page1_0_4.context, this.projectableNodes, null);
         this.init([].concat([this._el_0]), [this._el_0], [], []);
@@ -90,11 +91,11 @@ var _View_Page1_Host0 = (function (_super) {
 }(import1.AppView));
 function viewFactory_Page1_Host0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_Page1_Host === null)) {
-        (renderType_Page1_Host = viewUtils.createRenderComponentType('', 0, import10.ViewEncapsulation.None, [], {}));
+        (renderType_Page1_Host = viewUtils.createRenderComponentType('', 0, import11.ViewEncapsulation.None, [], {}));
     }
     return new _View_Page1_Host0(viewUtils, parentInjector, declarationEl);
 }
-export var Page1NgFactory = new import11.ComponentFactory('page-page1', viewFactory_Page1_Host0, import0.Page1);
+export var Page1NgFactory = new import12.ComponentFactory('page-page1', viewFactory_Page1_Host0, import0.Page1);
 var styles_Page1 = [];
 var renderType_Page1 = null;
 var _View_Page10 = (function (_super) {
@@ -105,7 +106,7 @@ var _View_Page10 = (function (_super) {
     _View_Page10.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-header', null);
-        this._Header_0_3 = new import12.Wrapper_Header(this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import23.ViewController, null));
+        this._Header_0_3 = new import13.Wrapper_Header(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import24.ViewController, null));
         this._text_1 = this.renderer.createText(this._el_0, '\n  ', null);
         this._text_2 = this.renderer.createText(this._el_0, '\n', null);
         this._text_3 = this.renderer.createText(parentRenderNode, '\n\n', null);
@@ -113,22 +114,22 @@ var _View_Page10 = (function (_super) {
         this.renderer.setElementAttribute(this._el_4, 'class', 'getstart');
         this.renderer.setElementAttribute(this._el_4, 'padding', '');
         this._appEl_4 = new import3.AppElement(4, null, this, this._el_4);
-        var compView_4 = import13.viewFactory_Content0(this.viewUtils, this.injector(4), this._appEl_4);
-        this._Content_4_4 = new import13.Wrapper_Content(this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import24.App), this.parentInjector.get(import25.Keyboard), this.parentInjector.get(import26.NgZone), this.parentInjector.get(import23.ViewController, null), this.parentInjector.get(import27.Tabs, null));
+        var compView_4 = import14.viewFactory_Content0(this.viewUtils, this.injector(4), this._appEl_4);
+        this._Content_4_4 = new import14.Wrapper_Content(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import25.App), this.parentInjector.get(import26.Keyboard), this.parentInjector.get(import27.NgZone), this.parentInjector.get(import24.ViewController, null), this.parentInjector.get(import28.Tabs, null));
         this._appEl_4.initComponent(this._Content_4_4.context, [], compView_4);
         this._text_5 = this.renderer.createText(null, '\n  ', null);
         this._el_6 = this.renderer.createElement(null, 'ion-list', null);
-        this._List_6_3 = new import14.Wrapper_List(this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_6), this.renderer, this.parentInjector.get(import28.GestureController));
+        this._List_6_3 = new import15.Wrapper_List(this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_6), this.renderer, this.parentInjector.get(import29.GestureController));
         this._text_7 = this.renderer.createText(this._el_6, '\n\n  ', null);
         this._el_8 = this.renderer.createElement(this._el_6, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_8, 'class', 'item item-block');
         this._appEl_8 = new import3.AppElement(8, 6, this, this._el_8);
-        var compView_8 = import15.viewFactory_Item0(this.viewUtils, this.injector(8), this._appEl_8);
-        this._Item_8_4 = new import15.Wrapper_Item(this.parentInjector.get(import29.Form), this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_8), this.renderer, this.parentInjector.get(import30.ItemReorder, null));
-        this._ItemContent_8_5 = new import15.Wrapper_ItemContent();
-        this._query_Label_8_0 = new import16.QueryList();
-        this._query_Button_8_1 = new import16.QueryList();
-        this._query_Icon_8_2 = new import16.QueryList();
+        var compView_8 = import16.viewFactory_Item0(this.viewUtils, this.injector(8), this._appEl_8);
+        this._Item_8_4 = new import16.Wrapper_Item(this.parentInjector.get(import30.Form), this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_8), this.renderer, this.parentInjector.get(import31.ItemReorder, null));
+        this._ItemContent_8_5 = new import16.Wrapper_ItemContent();
+        this._query_Label_8_0 = new import17.QueryList();
+        this._query_Button_8_1 = new import17.QueryList();
+        this._query_Icon_8_2 = new import17.QueryList();
         this._appEl_8.initComponent(this._Item_8_4.context, [], compView_8);
         this._text_9 = this.renderer.createText(null, '\n    ', null);
         this._el_10 = this.renderer.createElement(null, 'ion-input', null);
@@ -136,11 +137,11 @@ var _View_Page10 = (function (_super) {
         this.renderer.setElementAttribute(this._el_10, 'placeholder', 'Username');
         this.renderer.setElementAttribute(this._el_10, 'type', 'text');
         this._appEl_10 = new import3.AppElement(10, 8, this, this._el_10);
-        var compView_10 = import19.viewFactory_TextInput0(this.viewUtils, this.injector(10), this._appEl_10);
-        this._NgModel_10_4 = new import17.Wrapper_NgModel(null, null, null, null);
+        var compView_10 = import20.viewFactory_TextInput0(this.viewUtils, this.injector(10), this._appEl_10);
+        this._NgModel_10_4 = new import18.Wrapper_NgModel(null, null, null, null);
         this._NgControl_10_5 = this._NgModel_10_4.context;
-        this._NgControlStatus_10_6 = new import18.Wrapper_NgControlStatus(this._NgControl_10_5);
-        this._TextInput_10_7 = new import19.Wrapper_TextInput(this.parentInjector.get(import21.Config), this.parentInjector.get(import29.Form), this._Item_8_4.context, this.parentInjector.get(import24.App), this.parentInjector.get(import31.Platform), new import22.ElementRef(this._el_10), this.renderer, this._Content_4_4.context, this.parentInjector.get(import8.NavController, null), this._NgControl_10_5);
+        this._NgControlStatus_10_6 = new import19.Wrapper_NgControlStatus(this._NgControl_10_5);
+        this._TextInput_10_7 = new import20.Wrapper_TextInput(this.parentInjector.get(import22.Config), this.parentInjector.get(import30.Form), this._Item_8_4.context, this.parentInjector.get(import25.App), this.parentInjector.get(import32.Platform), new import23.ElementRef(this._el_10), this.renderer, this._Content_4_4.context, this.parentInjector.get(import8.NavController, null), this._NgControl_10_5);
         this._appEl_10.initComponent(this._TextInput_10_7.context, [], compView_10);
         compView_10.create(this._TextInput_10_7.context, [], null);
         this._text_11 = this.renderer.createText(null, '\n  ', null);
@@ -160,12 +161,12 @@ var _View_Page10 = (function (_super) {
         this._el_13 = this.renderer.createElement(this._el_6, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_13, 'class', 'item item-block');
         this._appEl_13 = new import3.AppElement(13, 6, this, this._el_13);
-        var compView_13 = import15.viewFactory_Item0(this.viewUtils, this.injector(13), this._appEl_13);
-        this._Item_13_4 = new import15.Wrapper_Item(this.parentInjector.get(import29.Form), this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_13), this.renderer, this.parentInjector.get(import30.ItemReorder, null));
-        this._ItemContent_13_5 = new import15.Wrapper_ItemContent();
-        this._query_Label_13_0 = new import16.QueryList();
-        this._query_Button_13_1 = new import16.QueryList();
-        this._query_Icon_13_2 = new import16.QueryList();
+        var compView_13 = import16.viewFactory_Item0(this.viewUtils, this.injector(13), this._appEl_13);
+        this._Item_13_4 = new import16.Wrapper_Item(this.parentInjector.get(import30.Form), this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_13), this.renderer, this.parentInjector.get(import31.ItemReorder, null));
+        this._ItemContent_13_5 = new import16.Wrapper_ItemContent();
+        this._query_Label_13_0 = new import17.QueryList();
+        this._query_Button_13_1 = new import17.QueryList();
+        this._query_Icon_13_2 = new import17.QueryList();
         this._appEl_13.initComponent(this._Item_13_4.context, [], compView_13);
         this._text_14 = this.renderer.createText(null, '\n    ', null);
         this._el_15 = this.renderer.createElement(null, 'ion-input', null);
@@ -173,11 +174,11 @@ var _View_Page10 = (function (_super) {
         this.renderer.setElementAttribute(this._el_15, 'placeholder', 'Password');
         this.renderer.setElementAttribute(this._el_15, 'type', 'password');
         this._appEl_15 = new import3.AppElement(15, 13, this, this._el_15);
-        var compView_15 = import19.viewFactory_TextInput0(this.viewUtils, this.injector(15), this._appEl_15);
-        this._NgModel_15_4 = new import17.Wrapper_NgModel(null, null, null, null);
+        var compView_15 = import20.viewFactory_TextInput0(this.viewUtils, this.injector(15), this._appEl_15);
+        this._NgModel_15_4 = new import18.Wrapper_NgModel(null, null, null, null);
         this._NgControl_15_5 = this._NgModel_15_4.context;
-        this._NgControlStatus_15_6 = new import18.Wrapper_NgControlStatus(this._NgControl_15_5);
-        this._TextInput_15_7 = new import19.Wrapper_TextInput(this.parentInjector.get(import21.Config), this.parentInjector.get(import29.Form), this._Item_13_4.context, this.parentInjector.get(import24.App), this.parentInjector.get(import31.Platform), new import22.ElementRef(this._el_15), this.renderer, this._Content_4_4.context, this.parentInjector.get(import8.NavController, null), this._NgControl_15_5);
+        this._NgControlStatus_15_6 = new import19.Wrapper_NgControlStatus(this._NgControl_15_5);
+        this._TextInput_15_7 = new import20.Wrapper_TextInput(this.parentInjector.get(import22.Config), this.parentInjector.get(import30.Form), this._Item_13_4.context, this.parentInjector.get(import25.App), this.parentInjector.get(import32.Platform), new import23.ElementRef(this._el_15), this.renderer, this._Content_4_4.context, this.parentInjector.get(import8.NavController, null), this._NgControl_15_5);
         this._appEl_15.initComponent(this._TextInput_15_7.context, [], compView_15);
         compView_15.create(this._TextInput_15_7.context, [], null);
         this._text_16 = this.renderer.createText(null, '\n  ', null);
@@ -200,8 +201,8 @@ var _View_Page10 = (function (_super) {
         this.renderer.setElementAttribute(this._el_19, 'ion-button', '');
         this.renderer.setElementAttribute(this._el_19, 'secondary', '');
         this._appEl_19 = new import3.AppElement(19, 4, this, this._el_19);
-        var compView_19 = import20.viewFactory_Button0(this.viewUtils, this.injector(19), this._appEl_19);
-        this._Button_19_4 = new import20.Wrapper_Button(null, '', this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_19), this.renderer);
+        var compView_19 = import21.viewFactory_Button0(this.viewUtils, this.injector(19), this._appEl_19);
+        this._Button_19_4 = new import21.Wrapper_Button(null, '', this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_19), this.renderer);
         this._appEl_19.initComponent(this._Button_19_4.context, [], compView_19);
         this._text_20 = this.renderer.createText(null, 'Iniciar Sesión', null);
         compView_19.create(this._Button_19_4.context, [[].concat([this._text_20])], null);
@@ -211,8 +212,8 @@ var _View_Page10 = (function (_super) {
         this.renderer.setElementAttribute(this._el_22, 'ion-button', '');
         this.renderer.setElementAttribute(this._el_22, 'secondary', '');
         this._appEl_22 = new import3.AppElement(22, 4, this, this._el_22);
-        var compView_22 = import20.viewFactory_Button0(this.viewUtils, this.injector(22), this._appEl_22);
-        this._Button_22_4 = new import20.Wrapper_Button(null, '', this.parentInjector.get(import21.Config), new import22.ElementRef(this._el_22), this.renderer);
+        var compView_22 = import21.viewFactory_Button0(this.viewUtils, this.injector(22), this._appEl_22);
+        this._Button_22_4 = new import21.Wrapper_Button(null, '', this.parentInjector.get(import22.Config), new import23.ElementRef(this._el_22), this.renderer);
         this._appEl_22.initComponent(this._Button_22_4.context, [], compView_22);
         this._text_23 = this.renderer.createText(null, 'Registrar', null);
         compView_22.create(this._Button_22_4.context, [[].concat([this._text_23])], null);
@@ -297,55 +298,55 @@ var _View_Page10 = (function (_super) {
         return null;
     };
     _View_Page10.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import32.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 2)))) {
+        if (((token === import33.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 2)))) {
             return this._Header_0_3.context;
         }
-        if (((token === import33.NgModel) && (10 === requestNodeIndex))) {
+        if (((token === import34.NgModel) && (10 === requestNodeIndex))) {
             return this._NgModel_10_4.context;
         }
-        if (((token === import34.NgControl) && (10 === requestNodeIndex))) {
+        if (((token === import35.NgControl) && (10 === requestNodeIndex))) {
             return this._NgControl_10_5;
         }
-        if (((token === import35.NgControlStatus) && (10 === requestNodeIndex))) {
+        if (((token === import36.NgControlStatus) && (10 === requestNodeIndex))) {
             return this._NgControlStatus_10_6.context;
         }
-        if (((token === import36.TextInput) && (10 === requestNodeIndex))) {
+        if (((token === import37.TextInput) && (10 === requestNodeIndex))) {
             return this._TextInput_10_7.context;
         }
-        if (((token === import37.Item) && ((8 <= requestNodeIndex) && (requestNodeIndex <= 11)))) {
+        if (((token === import38.Item) && ((8 <= requestNodeIndex) && (requestNodeIndex <= 11)))) {
             return this._Item_8_4.context;
         }
-        if (((token === import37.ItemContent) && ((8 <= requestNodeIndex) && (requestNodeIndex <= 11)))) {
+        if (((token === import38.ItemContent) && ((8 <= requestNodeIndex) && (requestNodeIndex <= 11)))) {
             return this._ItemContent_8_5.context;
         }
-        if (((token === import33.NgModel) && (15 === requestNodeIndex))) {
+        if (((token === import34.NgModel) && (15 === requestNodeIndex))) {
             return this._NgModel_15_4.context;
         }
-        if (((token === import34.NgControl) && (15 === requestNodeIndex))) {
+        if (((token === import35.NgControl) && (15 === requestNodeIndex))) {
             return this._NgControl_15_5;
         }
-        if (((token === import35.NgControlStatus) && (15 === requestNodeIndex))) {
+        if (((token === import36.NgControlStatus) && (15 === requestNodeIndex))) {
             return this._NgControlStatus_15_6.context;
         }
-        if (((token === import36.TextInput) && (15 === requestNodeIndex))) {
+        if (((token === import37.TextInput) && (15 === requestNodeIndex))) {
             return this._TextInput_15_7.context;
         }
-        if (((token === import37.Item) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 16)))) {
+        if (((token === import38.Item) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 16)))) {
             return this._Item_13_4.context;
         }
-        if (((token === import37.ItemContent) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 16)))) {
+        if (((token === import38.ItemContent) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 16)))) {
             return this._ItemContent_13_5.context;
         }
-        if (((token === import38.List) && ((6 <= requestNodeIndex) && (requestNodeIndex <= 17)))) {
+        if (((token === import39.List) && ((6 <= requestNodeIndex) && (requestNodeIndex <= 17)))) {
             return this._List_6_3.context;
         }
-        if (((token === import39.Button) && ((19 <= requestNodeIndex) && (requestNodeIndex <= 20)))) {
+        if (((token === import40.Button) && ((19 <= requestNodeIndex) && (requestNodeIndex <= 20)))) {
             return this._Button_19_4.context;
         }
-        if (((token === import39.Button) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 23)))) {
+        if (((token === import40.Button) && ((22 <= requestNodeIndex) && (requestNodeIndex <= 23)))) {
             return this._Button_22_4.context;
         }
-        if (((token === import40.Content) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 26)))) {
+        if (((token === import41.Content) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 26)))) {
             return this._Content_4_4.context;
         }
         return notFoundResult;
@@ -531,7 +532,7 @@ var _View_Page10 = (function (_super) {
 }(import1.AppView));
 export function viewFactory_Page10(viewUtils, parentInjector, declarationEl) {
     if ((renderType_Page1 === null)) {
-        (renderType_Page1 = viewUtils.createRenderComponentType('', 0, import10.ViewEncapsulation.None, styles_Page1, {}));
+        (renderType_Page1 = viewUtils.createRenderComponentType('', 0, import11.ViewEncapsulation.None, styles_Page1, {}));
     }
     return new _View_Page10(viewUtils, parentInjector, declarationEl);
 }

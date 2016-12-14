@@ -3,12 +3,14 @@ import { NavController } from 'ionic-angular';
 import { Page2 } from '../page2/page2';
 import { RegistroUsuarioPage } from '../registro-usuario/registro-usuario';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { Global } from '../../providers/global';
 import 'rxjs/Rx';
 var SERVER_URL = 'http://api.corejob.cl/';
 export var Page1 = (function () {
-    function Page1(navCtrl, http) {
+    function Page1(navCtrl, http, global) {
         this.navCtrl = navCtrl;
         this.http = http;
+        this.global = global;
     }
     Page1.prototype.openPage = function () {
         this.navCtrl.push(RegistroUsuarioPage);
@@ -23,9 +25,26 @@ export var Page1 = (function () {
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             console.log(data);
+            //this.global.setRegistrationIdVar(123456);
+            console.log(_this.global.getRegistrationIdVar());
+            _this.doRegistrationId(data.user);
             _this.navCtrl.push(Page2, { userid: data.user, token: data.token });
         }, function (err) {
-            console.log("ERROR!: ", err);
+            console.log("ERROR!: fallo el intento de sesión", err);
+        });
+    };
+    Page1.prototype.doRegistrationId = function (value) {
+        var _this = this;
+        var body = 'user[id]=' + value + '&user[registrationid]=' + this.global.getRegistrationIdVar();
+        var headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        var options = new RequestOptions({ headers: headers });
+        this.http
+            .patch(SERVER_URL + 'usuarios/' + value, body, options)
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) {
+            console.log(data);
+        }, function (err) {
+            console.log("ERROR!: error en registro de App." + _this.global.getRegistrationIdVar(), err);
         });
     };
     Page1.decorators = [
@@ -38,6 +57,7 @@ export var Page1 = (function () {
     Page1.ctorParameters = [
         { type: NavController, },
         { type: Http, },
+        { type: Global, },
     ];
     return Page1;
 }());

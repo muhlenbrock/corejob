@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, AlertController } from 'ionic-angular';
 import { StatusBar, Push, Splashscreen } from 'ionic-native';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
+import { Global } from '../providers/global';
 import 'rxjs/Rx';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
@@ -9,11 +10,12 @@ import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario'
 import { DetailPagePage } from '../pages/detail-page/detail-page';
 var SERVER_URL = 'http://api.corejob.cl/';
 export var MyApp = (function () {
-    function MyApp(platform, alertCtrl, http) {
+    function MyApp(platform, alertCtrl, http, global) {
         var _this = this;
         this.platform = platform;
         this.alertCtrl = alertCtrl;
         this.http = http;
+        this.global = global;
         this.rootPage = Page1;
         this.initializeApp();
         // used for an example of ngFor and navigation
@@ -42,19 +44,7 @@ export var MyApp = (function () {
             push.on('registration', function (data) {
                 console.log("device token ->", data.registrationId);
                 //TODO - send device token to server
-                /////
-                var body = 'user[id]=15' + '&user[registrationid]=' + data.registrationId;
-                var headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-                var options = new RequestOptions({ headers: headers });
-                _this.http
-                    .patch(SERVER_URL + 'usuarios/15', body, options)
-                    .map(function (res) { return res.json(); })
-                    .subscribe(function (data) {
-                    console.log(data);
-                }, function (err) {
-                    console.log("ERROR! api usuario: ", err);
-                });
-                /////
+                global.setRegistrationIdVar(data.registrationId);
             });
             push.on('notification', function (data) {
                 console.log('message', data.message);
@@ -113,6 +103,7 @@ export var MyApp = (function () {
         { type: Platform, },
         { type: AlertController, },
         { type: Http, },
+        { type: Global, },
     ];
     MyApp.propDecorators = {
         'nav': [{ type: ViewChild, args: [Nav,] },],
