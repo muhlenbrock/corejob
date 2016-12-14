@@ -14,29 +14,33 @@ import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
 import * as import9 from 'ionic-angular/navigation/nav-params';
-import * as import10 from '@angular/core/src/metadata/view';
-import * as import11 from '@angular/core/src/linker/component_factory';
-import * as import12 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
-import * as import13 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
-import * as import14 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
-import * as import15 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import16 from 'ionic-angular/config/config';
-import * as import17 from '@angular/core/src/linker/element_ref';
-import * as import18 from 'ionic-angular/navigation/view-controller';
-import * as import19 from 'ionic-angular/components/app/app';
-import * as import20 from 'ionic-angular/components/toolbar/toolbar';
-import * as import21 from 'ionic-angular/util/keyboard';
-import * as import22 from '@angular/core/src/zone/ng_zone';
-import * as import23 from 'ionic-angular/components/tabs/tabs';
-import * as import24 from 'ionic-angular/components/toolbar/toolbar-title';
-import * as import25 from 'ionic-angular/components/navbar/navbar';
-import * as import26 from 'ionic-angular/components/content/content';
+import * as import10 from '@angular/http/src/http';
+import * as import11 from 'ionic-angular/components/alert/alert';
+import * as import12 from '@angular/core/src/metadata/view';
+import * as import13 from '@angular/core/src/linker/component_factory';
+import * as import14 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
+import * as import15 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
+import * as import16 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
+import * as import17 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import18 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
+import * as import19 from 'ionic-angular/config/config';
+import * as import20 from '@angular/core/src/linker/element_ref';
+import * as import21 from 'ionic-angular/navigation/view-controller';
+import * as import22 from 'ionic-angular/components/app/app';
+import * as import23 from 'ionic-angular/components/toolbar/toolbar';
+import * as import24 from 'ionic-angular/util/keyboard';
+import * as import25 from '@angular/core/src/zone/ng_zone';
+import * as import26 from 'ionic-angular/components/tabs/tabs';
+import * as import27 from 'ionic-angular/components/toolbar/toolbar-title';
+import * as import28 from 'ionic-angular/components/navbar/navbar';
+import * as import29 from 'ionic-angular/components/button/button';
+import * as import30 from 'ionic-angular/components/content/content';
 export class Wrapper_DetailPagePage {
   context:import0.DetailPagePage;
   changed:boolean;
-  constructor(p0:any,p1:any) {
+  constructor(p0:any,p1:any,p2:any,p3:any) {
     this.changed = false;
-    this.context = new import0.DetailPagePage(p0,p1);
+    this.context = new import0.DetailPagePage(p0,p1,p2,p3);
   }
   detectChangesInternal(view:import1.AppView<any>,el:any,throwOnChange:boolean):boolean {
     var changed:any = this.changed;
@@ -56,7 +60,7 @@ class _View_DetailPagePage_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('page-detail-page',rootSelector,(null as any));
     this._appEl_0 = new import3.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_DetailPagePage0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._DetailPagePage_0_4 = new Wrapper_DetailPagePage(this.parentInjector.get(import8.NavController),this.parentInjector.get(import9.NavParams));
+    this._DetailPagePage_0_4 = new Wrapper_DetailPagePage(this.parentInjector.get(import8.NavController),this.parentInjector.get(import9.NavParams),this.parentInjector.get(import10.Http),this.parentInjector.get(import11.AlertController));
     this._appEl_0.initComponent(this._DetailPagePage_0_4.context,([] as any[]),compView_0);
     compView_0.create(this._DetailPagePage_0_4.context,this.projectableNodes,(null as any));
     this.init(([] as any[]).concat([this._el_0]),[this._el_0],([] as any[]),([] as any[]));
@@ -73,31 +77,31 @@ class _View_DetailPagePage_Host0 extends import1.AppView<any> {
   }
 }
 function viewFactory_DetailPagePage_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<any> {
-  if ((renderType_DetailPagePage_Host === (null as any))) { (renderType_DetailPagePage_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,([] as any[]),{})); }
+  if ((renderType_DetailPagePage_Host === (null as any))) { (renderType_DetailPagePage_Host = viewUtils.createRenderComponentType('',0,import12.ViewEncapsulation.None,([] as any[]),{})); }
   return new _View_DetailPagePage_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const DetailPagePageNgFactory:import11.ComponentFactory<import0.DetailPagePage> = new import11.ComponentFactory<import0.DetailPagePage>('page-detail-page',viewFactory_DetailPagePage_Host0,import0.DetailPagePage);
+export const DetailPagePageNgFactory:import13.ComponentFactory<import0.DetailPagePage> = new import13.ComponentFactory<import0.DetailPagePage>('page-detail-page',viewFactory_DetailPagePage_Host0,import0.DetailPagePage);
 const styles_DetailPagePage:any[] = ([] as any[]);
 var renderType_DetailPagePage:import2.RenderComponentType = (null as any);
 class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
   _text_0:any;
   _el_1:any;
-  _Header_1_3:import12.Wrapper_Header;
+  _Header_1_3:import14.Wrapper_Header;
   _text_2:any;
   _el_3:any;
   /*private*/ _appEl_3:import3.AppElement;
-  _Navbar_3_4:import13.Wrapper_Navbar;
+  _Navbar_3_4:import15.Wrapper_Navbar;
   _text_4:any;
   _el_5:any;
   /*private*/ _appEl_5:import3.AppElement;
-  _ToolbarTitle_5_4:import14.Wrapper_ToolbarTitle;
+  _ToolbarTitle_5_4:import16.Wrapper_ToolbarTitle;
   _text_6:any;
   _text_7:any;
   _text_8:any;
   _text_9:any;
   _el_10:any;
   /*private*/ _appEl_10:import3.AppElement;
-  _Content_10_4:import15.Wrapper_Content;
+  _Content_10_4:import17.Wrapper_Content;
   _text_11:any;
   _el_12:any;
   _text_13:any;
@@ -105,12 +109,21 @@ class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
   _el_15:any;
   _text_16:any;
   _text_17:any;
-  _text_18:any;
+  _el_18:any;
+  /*private*/ _appEl_18:import3.AppElement;
+  _Button_18_4:import18.Wrapper_Button;
+  _text_19:any;
+  _text_20:any;
+  _el_21:any;
+  /*private*/ _appEl_21:import3.AppElement;
+  _Button_21_4:import18.Wrapper_Button;
+  _text_22:any;
+  _text_23:any;
+  _text_24:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
   /*private*/ _expr_4:any;
-  /*private*/ _expr_5:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement) {
     super(_View_DetailPagePage0,renderType_DetailPagePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -118,20 +131,20 @@ class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._text_0 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._el_1 = this.renderer.createElement(parentRenderNode,'ion-header',(null as any));
-    this._Header_1_3 = new import12.Wrapper_Header(this.parentInjector.get(import16.Config),new import17.ElementRef(this._el_1),this.renderer,this.parentInjector.get(import18.ViewController,(null as any)));
+    this._Header_1_3 = new import14.Wrapper_Header(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_1),this.renderer,this.parentInjector.get(import21.ViewController,(null as any)));
     this._text_2 = this.renderer.createText(this._el_1,'\n  ',(null as any));
     this._el_3 = this.renderer.createElement(this._el_1,'ion-navbar',(null as any));
     this.renderer.setElementAttribute(this._el_3,'class','toolbar');
-    this.renderer.setElementAttribute(this._el_3,'color','primary');
+    this.renderer.setElementAttribute(this._el_3,'color','corejob');
     this._appEl_3 = new import3.AppElement(3,1,this,this._el_3);
-    var compView_3:any = import13.viewFactory_Navbar0(this.viewUtils,this.injector(3),this._appEl_3);
-    this._Navbar_3_4 = new import13.Wrapper_Navbar(this.parentInjector.get(import19.App),this.parentInjector.get(import18.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import16.Config),new import17.ElementRef(this._el_3),this.renderer);
+    var compView_3:any = import15.viewFactory_Navbar0(this.viewUtils,this.injector(3),this._appEl_3);
+    this._Navbar_3_4 = new import15.Wrapper_Navbar(this.parentInjector.get(import22.App),this.parentInjector.get(import21.ViewController,(null as any)),this.parentInjector.get(import8.NavController,(null as any)),this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_3),this.renderer);
     this._appEl_3.initComponent(this._Navbar_3_4.context,([] as any[]),compView_3);
     this._text_4 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_5 = this.renderer.createElement((null as any),'ion-title',(null as any));
     this._appEl_5 = new import3.AppElement(5,3,this,this._el_5);
-    var compView_5:any = import14.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(5),this._appEl_5);
-    this._ToolbarTitle_5_4 = new import14.Wrapper_ToolbarTitle(this.parentInjector.get(import16.Config),new import17.ElementRef(this._el_5),this.renderer,this.parentInjector.get(import20.Toolbar,(null as any)),this._Navbar_3_4.context);
+    var compView_5:any = import16.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(5),this._appEl_5);
+    this._ToolbarTitle_5_4 = new import16.Wrapper_ToolbarTitle(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_5),this.renderer,this.parentInjector.get(import23.Toolbar,(null as any)),this._Navbar_3_4.context);
     this._appEl_5.initComponent(this._ToolbarTitle_5_4.context,([] as any[]),compView_5);
     this._text_6 = this.renderer.createText((null as any),'\n      Detalle Notificacion\n    ',(null as any));
     compView_5.create(this._ToolbarTitle_5_4.context,[([] as any[]).concat([this._text_6])],(null as any));
@@ -153,16 +166,38 @@ class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
     this._el_10 = this.renderer.createElement(parentRenderNode,'ion-content',(null as any));
     this.renderer.setElementAttribute(this._el_10,'padding','');
     this._appEl_10 = new import3.AppElement(10,(null as any),this,this._el_10);
-    var compView_10:any = import15.viewFactory_Content0(this.viewUtils,this.injector(10),this._appEl_10);
-    this._Content_10_4 = new import15.Wrapper_Content(this.parentInjector.get(import16.Config),new import17.ElementRef(this._el_10),this.renderer,this.parentInjector.get(import19.App),this.parentInjector.get(import21.Keyboard),this.parentInjector.get(import22.NgZone),this.parentInjector.get(import18.ViewController,(null as any)),this.parentInjector.get(import23.Tabs,(null as any)));
+    var compView_10:any = import17.viewFactory_Content0(this.viewUtils,this.injector(10),this._appEl_10);
+    this._Content_10_4 = new import17.Wrapper_Content(this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_10),this.renderer,this.parentInjector.get(import22.App),this.parentInjector.get(import24.Keyboard),this.parentInjector.get(import25.NgZone),this.parentInjector.get(import21.ViewController,(null as any)),this.parentInjector.get(import26.Tabs,(null as any)));
     this._appEl_10.initComponent(this._Content_10_4.context,([] as any[]),compView_10);
     this._text_11 = this.renderer.createText((null as any),'\n  ',(null as any));
     this._el_12 = this.renderer.createElement((null as any),'h2',(null as any));
-    this._text_13 = this.renderer.createText(this._el_12,'',(null as any));
+    this._text_13 = this.renderer.createText(this._el_12,'Notificación',(null as any));
     this._text_14 = this.renderer.createText((null as any),'\n  ',(null as any));
     this._el_15 = this.renderer.createElement((null as any),'h6',(null as any));
     this._text_16 = this.renderer.createText(this._el_15,'',(null as any));
-    this._text_17 = this.renderer.createText((null as any),'\n',(null as any));
+    this._text_17 = this.renderer.createText((null as any),'\n  ',(null as any));
+    this._el_18 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_18,'color','secondary');
+    this.renderer.setElementAttribute(this._el_18,'ion-button','');
+    this.renderer.setElementAttribute(this._el_18,'round','');
+    this._appEl_18 = new import3.AppElement(18,10,this,this._el_18);
+    var compView_18:any = import18.viewFactory_Button0(this.viewUtils,this.injector(18),this._appEl_18);
+    this._Button_18_4 = new import18.Wrapper_Button((null as any),'',this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_18),this.renderer);
+    this._appEl_18.initComponent(this._Button_18_4.context,([] as any[]),compView_18);
+    this._text_19 = this.renderer.createText((null as any),'Confirmar',(null as any));
+    compView_18.create(this._Button_18_4.context,[([] as any[]).concat([this._text_19])],(null as any));
+    this._text_20 = this.renderer.createText((null as any),'\n  ',(null as any));
+    this._el_21 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_21,'color','danger');
+    this.renderer.setElementAttribute(this._el_21,'ion-button','');
+    this.renderer.setElementAttribute(this._el_21,'round','');
+    this._appEl_21 = new import3.AppElement(21,10,this,this._el_21);
+    var compView_21:any = import18.viewFactory_Button0(this.viewUtils,this.injector(21),this._appEl_21);
+    this._Button_21_4 = new import18.Wrapper_Button((null as any),'',this.parentInjector.get(import19.Config),new import20.ElementRef(this._el_21),this.renderer);
+    this._appEl_21.initComponent(this._Button_21_4.context,([] as any[]),compView_21);
+    this._text_22 = this.renderer.createText((null as any),'Rechazar',(null as any));
+    compView_21.create(this._Button_21_4.context,[([] as any[]).concat([this._text_22])],(null as any));
+    this._text_23 = this.renderer.createText((null as any),'\n',(null as any));
     compView_10.create(this._Content_10_4.context,[
       ([] as any[]),
       ([] as any[]).concat([
@@ -170,18 +205,23 @@ class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
         this._el_12,
         this._text_14,
         this._el_15,
-        this._text_17
+        this._text_17,
+        this._el_18,
+        this._text_20,
+        this._el_21,
+        this._text_23
       ]
       ),
       ([] as any[])
     ]
     ,(null as any));
-    this._text_18 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_24 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
     this._expr_3 = import7.UNINITIALIZED;
     this._expr_4 = import7.UNINITIALIZED;
-    this._expr_5 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_18,'click',this.eventHandler(this._handle_click_18_0.bind(this)));
+    var disposable_1:Function = this.renderer.listen(this._el_21,'click',this.eventHandler(this._handle_click_21_0.bind(this)));
     this.init(([] as any[]),[
       this._text_0,
       this._el_1,
@@ -201,26 +241,52 @@ class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
       this._el_15,
       this._text_16,
       this._text_17,
-      this._text_18
+      this._el_18,
+      this._text_19,
+      this._text_20,
+      this._el_21,
+      this._text_22,
+      this._text_23,
+      this._text_24
     ]
-    ,([] as any[]),([] as any[]));
+    ,[
+      disposable_0,
+      disposable_1
+    ]
+    ,([] as any[]));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import24.ToolbarTitle) && ((5 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._ToolbarTitle_5_4.context; }
-    if (((token === import25.Navbar) && ((3 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Navbar_3_4.context; }
-    if (((token === import20.Header) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 8)))) { return this._Header_1_3.context; }
-    if (((token === import26.Content) && ((10 <= requestNodeIndex) && (requestNodeIndex <= 17)))) { return this._Content_10_4.context; }
+    if (((token === import27.ToolbarTitle) && ((5 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._ToolbarTitle_5_4.context; }
+    if (((token === import28.Navbar) && ((3 <= requestNodeIndex) && (requestNodeIndex <= 7)))) { return this._Navbar_3_4.context; }
+    if (((token === import23.Header) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 8)))) { return this._Header_1_3.context; }
+    if (((token === import29.Button) && ((18 <= requestNodeIndex) && (requestNodeIndex <= 19)))) { return this._Button_18_4.context; }
+    if (((token === import29.Button) && ((21 <= requestNodeIndex) && (requestNodeIndex <= 22)))) { return this._Button_21_4.context; }
+    if (((token === import30.Content) && ((10 <= requestNodeIndex) && (requestNodeIndex <= 23)))) { return this._Content_10_4.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this._Header_1_3.detectChangesInternal(this,this._el_1,throwOnChange);
-    const currVal_0:any = 'primary';
+    const currVal_0:any = 'corejob';
     this._Navbar_3_4.check_color(currVal_0,throwOnChange,false);
     this._Navbar_3_4.detectChangesInternal(this,this._el_3,throwOnChange);
     if (this._ToolbarTitle_5_4.detectChangesInternal(this,this._el_5,throwOnChange)) { this._appEl_5.componentView.markAsCheckOnce(); }
     if (this._Content_10_4.detectChangesInternal(this,this._el_10,throwOnChange)) { this._appEl_10.componentView.markAsCheckOnce(); }
+    const currVal_6:any = '';
+    this._Button_18_4.check_round(currVal_6,throwOnChange,false);
+    const currVal_7:any = 'secondary';
+    this._Button_18_4.check_color(currVal_7,throwOnChange,false);
+    if (this._Button_18_4.detectChangesInternal(this,this._el_18,throwOnChange)) { this._appEl_18.componentView.markAsCheckOnce(); }
+    const currVal_9:any = '';
+    this._Button_21_4.check_round(currVal_9,throwOnChange,false);
+    const currVal_10:any = 'danger';
+    this._Button_21_4.check_color(currVal_10,throwOnChange,false);
+    if (this._Button_21_4.detectChangesInternal(this,this._el_21,throwOnChange)) { this._appEl_21.componentView.markAsCheckOnce(); }
     this.detectContentChildrenChanges(throwOnChange);
+    if (!throwOnChange) {
+      if ((this.numberOfChecks === 0)) { this._Button_18_4.context.ngAfterContentInit(); }
+      if ((this.numberOfChecks === 0)) { this._Button_21_4.context.ngAfterContentInit(); }
+    }
     const currVal_1:any = this._Navbar_3_4.context._hidden;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
       this.renderer.setElementProperty(this._el_3,'hidden',currVal_1);
@@ -236,15 +302,10 @@ class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
       this.renderer.setElementClass(this._el_10,'statusbar-padding',currVal_3);
       this._expr_3 = currVal_3;
     }
-    const currVal_4:any = import4.interpolate(1,'',this.context.titulo,'');
+    const currVal_4:any = import4.interpolate(1,'',this.context.pushMessage,'');
     if (import4.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
-      this.renderer.setText(this._text_13,currVal_4);
+      this.renderer.setText(this._text_16,currVal_4);
       this._expr_4 = currVal_4;
-    }
-    const currVal_5:any = import4.interpolate(1,'',this.context.pushMessage,'');
-    if (import4.checkBinding(throwOnChange,this._expr_5,currVal_5)) {
-      this.renderer.setText(this._text_16,currVal_5);
-      this._expr_5 = currVal_5;
     }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Navbar_3_4.context.ngAfterViewInit(); } }
@@ -252,8 +313,18 @@ class _View_DetailPagePage0 extends import1.AppView<import0.DetailPagePage> {
   destroyInternal():void {
     this._Content_10_4.context.ngOnDestroy();
   }
+  private _handle_click_18_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.doConfirm()) !== false);
+    return (true && pd_0);
+  }
+  private _handle_click_21_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.doCancel()) !== false);
+    return (true && pd_0);
+  }
 }
 export function viewFactory_DetailPagePage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import3.AppElement):import1.AppView<import0.DetailPagePage> {
-  if ((renderType_DetailPagePage === (null as any))) { (renderType_DetailPagePage = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,styles_DetailPagePage,{})); }
+  if ((renderType_DetailPagePage === (null as any))) { (renderType_DetailPagePage = viewUtils.createRenderComponentType('',0,import12.ViewEncapsulation.None,styles_DetailPagePage,{})); }
   return new _View_DetailPagePage0(viewUtils,parentInjector,declarationEl);
 }

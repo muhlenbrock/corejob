@@ -400,7 +400,7 @@ class _View_Page10 extends import1.AppView<import0.Page1> {
     this._ItemContent_8_5.detectChangesInternal(this,this._el_8,throwOnChange);
     const currVal_2:any = 'loginUser';
     this._NgModel_10_4.check_name(currVal_2,throwOnChange,false);
-    const currVal_3:any = this.context.usuario;
+    const currVal_3:any = this.context.data.usuario;
     this._NgModel_10_4.check_model(currVal_3,throwOnChange,false);
     this._NgModel_10_4.detectChangesInternal(this,this._el_10,throwOnChange);
     this._NgControlStatus_10_6.detectChangesInternal(this,this._el_10,throwOnChange);
@@ -413,7 +413,7 @@ class _View_Page10 extends import1.AppView<import0.Page1> {
     this._ItemContent_13_5.detectChangesInternal(this,this._el_13,throwOnChange);
     const currVal_13:any = 'loginPassword';
     this._NgModel_15_4.check_name(currVal_13,throwOnChange,false);
-    const currVal_14:any = this.context.password;
+    const currVal_14:any = this.context.data.password;
     this._NgModel_15_4.check_model(currVal_14,throwOnChange,false);
     this._NgModel_15_4.detectChangesInternal(this,this._el_15,throwOnChange);
     this._NgControlStatus_15_6.detectChangesInternal(this,this._el_15,throwOnChange);
@@ -533,12 +533,12 @@ class _View_Page10 extends import1.AppView<import0.Page1> {
   }
   private _handle_ngModelChange_10_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>(this.context.usuario = $event)) !== false);
+    const pd_0:any = ((<any>(this.context.data.usuario = $event)) !== false);
     return (true && pd_0);
   }
   private _handle_ngModelChange_15_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>(this.context.password = $event)) !== false);
+    const pd_0:any = ((<any>(this.context.data.password = $event)) !== false);
     return (true && pd_0);
   }
   private _handle_click_19_0($event:any):boolean {

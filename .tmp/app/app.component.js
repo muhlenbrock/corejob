@@ -8,6 +8,7 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario';
 import { DetailPagePage } from '../pages/detail-page/detail-page';
+import { IntroPage } from '../pages/intro/intro';
 var SERVER_URL = 'http://api.corejob.cl/';
 export var MyApp = (function () {
     function MyApp(platform, alertCtrl, http, global) {
@@ -16,14 +17,15 @@ export var MyApp = (function () {
         this.alertCtrl = alertCtrl;
         this.http = http;
         this.global = global;
-        this.rootPage = Page1;
+        this.rootPage = IntroPage;
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
             { title: 'Page One', component: Page1 },
             { title: 'Page Two', component: Page2 },
             { title: 'Registro Usuario', component: RegistroUsuarioPage },
-            { title: 'DetailPagePage', component: DetailPagePage }
+            { title: 'DetailPagePage', component: DetailPagePage },
+            { title: 'IntroPage', component: IntroPage }
         ];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
@@ -53,7 +55,7 @@ export var MyApp = (function () {
                 if (data.additionalData.foreground) {
                     // if application open, show popup
                     var confirmAlert = _this.alertCtrl.create({
-                        title: data.title,
+                        title: 'Notificación',
                         message: data.message,
                         buttons: [{
                                 text: 'Ignorar',

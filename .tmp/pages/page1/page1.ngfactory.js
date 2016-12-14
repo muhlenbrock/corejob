@@ -363,7 +363,7 @@ var _View_Page10 = (function (_super) {
         this._ItemContent_8_5.detectChangesInternal(this, this._el_8, throwOnChange);
         var currVal_2 = 'loginUser';
         this._NgModel_10_4.check_name(currVal_2, throwOnChange, false);
-        var currVal_3 = this.context.usuario;
+        var currVal_3 = this.context.data.usuario;
         this._NgModel_10_4.check_model(currVal_3, throwOnChange, false);
         this._NgModel_10_4.detectChangesInternal(this, this._el_10, throwOnChange);
         this._NgControlStatus_10_6.detectChangesInternal(this, this._el_10, throwOnChange);
@@ -378,7 +378,7 @@ var _View_Page10 = (function (_super) {
         this._ItemContent_13_5.detectChangesInternal(this, this._el_13, throwOnChange);
         var currVal_13 = 'loginPassword';
         this._NgModel_15_4.check_name(currVal_13, throwOnChange, false);
-        var currVal_14 = this.context.password;
+        var currVal_14 = this.context.data.password;
         this._NgModel_15_4.check_model(currVal_14, throwOnChange, false);
         this._NgModel_15_4.detectChangesInternal(this, this._el_15, throwOnChange);
         this._NgControlStatus_15_6.detectChangesInternal(this, this._el_15, throwOnChange);
@@ -510,12 +510,12 @@ var _View_Page10 = (function (_super) {
     };
     _View_Page10.prototype._handle_ngModelChange_10_0 = function ($event) {
         this.markPathToRootAsCheckOnce();
-        var pd_0 = ((this.context.usuario = $event) !== false);
+        var pd_0 = ((this.context.data.usuario = $event) !== false);
         return (true && pd_0);
     };
     _View_Page10.prototype._handle_ngModelChange_15_0 = function ($event) {
         this.markPathToRootAsCheckOnce();
-        var pd_0 = ((this.context.password = $event) !== false);
+        var pd_0 = ((this.context.data.password = $event) !== false);
         return (true && pd_0);
     };
     _View_Page10.prototype._handle_click_19_0 = function ($event) {

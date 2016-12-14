@@ -11,13 +11,16 @@ export var Page1 = (function () {
         this.navCtrl = navCtrl;
         this.http = http;
         this.global = global;
+        this.data = {};
+        this.data.usuario = "";
+        this.data.password = "";
     }
     Page1.prototype.openPage = function () {
         this.navCtrl.push(RegistroUsuarioPage);
     };
     Page1.prototype.doLogin = function () {
         var _this = this;
-        var body = 'user[email]=' + this.usuario + '&user[password]=' + this.password;
+        var body = 'user[email]=' + this.data.usuario + '&user[password]=' + this.data.password;
         var headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
         var options = new RequestOptions({ headers: headers });
         this.http
@@ -25,8 +28,11 @@ export var Page1 = (function () {
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             console.log(data);
+            _this.mydata = data;
             //this.global.setRegistrationIdVar(123456);
-            console.log(_this.global.getRegistrationIdVar());
+            //console.log(this.global.getRegistrationIdVar());
+            _this.data.usuario = "";
+            _this.data.password = "";
             _this.doRegistrationId(data.user);
             _this.navCtrl.push(Page2, { userid: data.user, token: data.token });
         }, function (err) {

@@ -14,6 +14,7 @@ export var Page2 = (function () {
         this.userid = navParams.get('userid');
         this.token = navParams.get('token');
         //alert(this.userid + "   " + this.token);
+        console.log("este es el usuario id: " + this.userid);
         var body = this.userid;
         var headers = new Headers({
             'Content-Type': 'application/x-www-form-urlencoded'

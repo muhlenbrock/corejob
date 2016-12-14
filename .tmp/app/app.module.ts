@@ -6,6 +6,7 @@ import { Page2 } from '../pages/page2/page2';
 import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario';
 import { DetailPagePage } from '../pages/detail-page/detail-page';
 import { Global } from '../providers/global';
+import { IntroPage } from '../pages/intro/intro';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { Global } from '../providers/global';
     Page1,
     Page2,
     RegistroUsuarioPage,
-    DetailPagePage
+    DetailPagePage,
+    IntroPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +26,8 @@ import { Global } from '../providers/global';
     Page1,
     Page2,
     RegistroUsuarioPage,
-    DetailPagePage
+    DetailPagePage,
+    IntroPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Global]
 })

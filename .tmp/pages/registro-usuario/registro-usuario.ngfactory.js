@@ -116,6 +116,7 @@ var _View_RegistroUsuarioPage0 = (function (_super) {
         this._text_2 = this.renderer.createText(this._el_1, '\n\n  ', null);
         this._el_3 = this.renderer.createElement(this._el_1, 'ion-navbar', null);
         this.renderer.setElementAttribute(this._el_3, 'class', 'toolbar');
+        this.renderer.setElementAttribute(this._el_3, 'color', 'corejob');
         this._appEl_3 = new import3.AppElement(3, 1, this, this._el_3);
         var compView_3 = import12.viewFactory_Navbar0(this.viewUtils, this.injector(3), this._appEl_3);
         this._Navbar_3_4 = new import12.Wrapper_Navbar(this.parentInjector.get(import26.App), this.parentInjector.get(import25.ViewController, null), this.parentInjector.get(import27.NavController, null), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_3), this.renderer);
@@ -126,7 +127,7 @@ var _View_RegistroUsuarioPage0 = (function (_super) {
         var compView_5 = import13.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(5), this._appEl_5);
         this._ToolbarTitle_5_4 = new import13.Wrapper_ToolbarTitle(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_5), this.renderer, this.parentInjector.get(import28.Toolbar, null), this._Navbar_3_4.context);
         this._appEl_5.initComponent(this._ToolbarTitle_5_4.context, [], compView_5);
-        this._text_6 = this.renderer.createText(null, 'registroUsuario', null);
+        this._text_6 = this.renderer.createText(null, 'Registro usuario', null);
         compView_5.create(this._ToolbarTitle_5_4.context, [[].concat([this._text_6])], null);
         this._text_7 = this.renderer.createText(null, '\n  ', null);
         compView_3.create(this._Navbar_3_4.context, [
@@ -355,41 +356,41 @@ var _View_RegistroUsuarioPage0 = (function (_super) {
             []
         ], null);
         this._text_53 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
         this._expr_2 = import7.UNINITIALIZED;
+        this._expr_3 = import7.UNINITIALIZED;
         var disposable_0 = this.renderer.listen(this._el_19, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_19_0.bind(this)));
         var subscription_0 = this._NgModel_19_4.context.update.subscribe(this.eventHandler(this._handle_ngModelChange_19_0.bind(this)));
-        this._expr_7 = import7.UNINITIALIZED;
         this._expr_8 = import7.UNINITIALIZED;
         this._expr_9 = import7.UNINITIALIZED;
         this._expr_10 = import7.UNINITIALIZED;
         this._expr_11 = import7.UNINITIALIZED;
         this._expr_12 = import7.UNINITIALIZED;
+        this._expr_13 = import7.UNINITIALIZED;
         var disposable_1 = this.renderer.listen(this._el_27, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_27_0.bind(this)));
         var subscription_1 = this._NgModel_27_4.context.update.subscribe(this.eventHandler(this._handle_ngModelChange_27_0.bind(this)));
-        this._expr_19 = import7.UNINITIALIZED;
         this._expr_20 = import7.UNINITIALIZED;
         this._expr_21 = import7.UNINITIALIZED;
         this._expr_22 = import7.UNINITIALIZED;
         this._expr_23 = import7.UNINITIALIZED;
         this._expr_24 = import7.UNINITIALIZED;
+        this._expr_25 = import7.UNINITIALIZED;
         var disposable_2 = this.renderer.listen(this._el_35, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_35_0.bind(this)));
         var subscription_2 = this._NgModel_35_4.context.update.subscribe(this.eventHandler(this._handle_ngModelChange_35_0.bind(this)));
-        this._expr_31 = import7.UNINITIALIZED;
         this._expr_32 = import7.UNINITIALIZED;
         this._expr_33 = import7.UNINITIALIZED;
         this._expr_34 = import7.UNINITIALIZED;
         this._expr_35 = import7.UNINITIALIZED;
         this._expr_36 = import7.UNINITIALIZED;
+        this._expr_37 = import7.UNINITIALIZED;
         var disposable_3 = this.renderer.listen(this._el_43, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_43_0.bind(this)));
         var subscription_3 = this._NgModel_43_4.context.update.subscribe(this.eventHandler(this._handle_ngModelChange_43_0.bind(this)));
-        this._expr_43 = import7.UNINITIALIZED;
         this._expr_44 = import7.UNINITIALIZED;
         this._expr_45 = import7.UNINITIALIZED;
         this._expr_46 = import7.UNINITIALIZED;
         this._expr_47 = import7.UNINITIALIZED;
         this._expr_48 = import7.UNINITIALIZED;
+        this._expr_49 = import7.UNINITIALIZED;
         var disposable_4 = this.renderer.listen(this._el_49, 'click', this.eventHandler(this._handle_click_49_0.bind(this)));
         this.init([], [
             this._text_0,
@@ -570,6 +571,8 @@ var _View_RegistroUsuarioPage0 = (function (_super) {
     };
     _View_RegistroUsuarioPage0.prototype.detectChangesInternal = function (throwOnChange) {
         this._Header_1_3.detectChangesInternal(this, this._el_1, throwOnChange);
+        var currVal_0 = 'corejob';
+        this._Navbar_3_4.check_color(currVal_0, throwOnChange, false);
         this._Navbar_3_4.detectChangesInternal(this, this._el_3, throwOnChange);
         if (this._ToolbarTitle_5_4.detectChangesInternal(this, this._el_5, throwOnChange)) {
             this._appEl_5.componentView.markAsCheckOnce();
@@ -582,77 +585,77 @@ var _View_RegistroUsuarioPage0 = (function (_super) {
             this._appEl_14.componentView.markAsCheckOnce();
         }
         this._ItemContent_14_5.detectChangesInternal(this, this._el_14, throwOnChange);
-        var currVal_3 = 'primary';
-        this._Label_16_3.check_color(currVal_3, throwOnChange, false);
+        var currVal_4 = 'primary';
+        this._Label_16_3.check_color(currVal_4, throwOnChange, false);
         this._Label_16_3.detectChangesInternal(this, this._el_16, throwOnChange);
-        var currVal_5 = 'userRut';
-        this._NgModel_19_4.check_name(currVal_5, throwOnChange, false);
-        var currVal_6 = this.context.rut;
-        this._NgModel_19_4.check_model(currVal_6, throwOnChange, false);
+        var currVal_6 = 'userRut';
+        this._NgModel_19_4.check_name(currVal_6, throwOnChange, false);
+        var currVal_7 = this.context.rut;
+        this._NgModel_19_4.check_model(currVal_7, throwOnChange, false);
         this._NgModel_19_4.detectChangesInternal(this, this._el_19, throwOnChange);
         this._NgControlStatus_19_6.detectChangesInternal(this, this._el_19, throwOnChange);
-        var currVal_13 = 'Ingrese su Rut';
-        this._TextInput_19_7.check_placeholder(currVal_13, throwOnChange, false);
-        var currVal_14 = 'text';
-        this._TextInput_19_7.check_type(currVal_14, throwOnChange, false);
+        var currVal_14 = 'Ingrese su Rut';
+        this._TextInput_19_7.check_placeholder(currVal_14, throwOnChange, false);
+        var currVal_15 = 'text';
+        this._TextInput_19_7.check_type(currVal_15, throwOnChange, false);
         this._TextInput_19_7.detectChangesInternal(this, this._el_19, throwOnChange);
         if (this._Item_22_4.detectChangesInternal(this, this._el_22, throwOnChange)) {
             this._appEl_22.componentView.markAsCheckOnce();
         }
         this._ItemContent_22_5.detectChangesInternal(this, this._el_22, throwOnChange);
-        var currVal_15 = 'primary';
-        this._Label_24_3.check_color(currVal_15, throwOnChange, false);
+        var currVal_16 = 'primary';
+        this._Label_24_3.check_color(currVal_16, throwOnChange, false);
         this._Label_24_3.detectChangesInternal(this, this._el_24, throwOnChange);
-        var currVal_17 = 'userNombre';
-        this._NgModel_27_4.check_name(currVal_17, throwOnChange, false);
-        var currVal_18 = this.context.nombre;
-        this._NgModel_27_4.check_model(currVal_18, throwOnChange, false);
+        var currVal_18 = 'userNombre';
+        this._NgModel_27_4.check_name(currVal_18, throwOnChange, false);
+        var currVal_19 = this.context.nombre;
+        this._NgModel_27_4.check_model(currVal_19, throwOnChange, false);
         this._NgModel_27_4.detectChangesInternal(this, this._el_27, throwOnChange);
         this._NgControlStatus_27_6.detectChangesInternal(this, this._el_27, throwOnChange);
-        var currVal_25 = 'Ingrese su nombre';
-        this._TextInput_27_7.check_placeholder(currVal_25, throwOnChange, false);
-        var currVal_26 = 'text';
-        this._TextInput_27_7.check_type(currVal_26, throwOnChange, false);
+        var currVal_26 = 'Ingrese su nombre';
+        this._TextInput_27_7.check_placeholder(currVal_26, throwOnChange, false);
+        var currVal_27 = 'text';
+        this._TextInput_27_7.check_type(currVal_27, throwOnChange, false);
         this._TextInput_27_7.detectChangesInternal(this, this._el_27, throwOnChange);
         if (this._Item_30_4.detectChangesInternal(this, this._el_30, throwOnChange)) {
             this._appEl_30.componentView.markAsCheckOnce();
         }
         this._ItemContent_30_5.detectChangesInternal(this, this._el_30, throwOnChange);
-        var currVal_27 = 'primary';
-        this._Label_32_3.check_color(currVal_27, throwOnChange, false);
+        var currVal_28 = 'primary';
+        this._Label_32_3.check_color(currVal_28, throwOnChange, false);
         this._Label_32_3.detectChangesInternal(this, this._el_32, throwOnChange);
-        var currVal_29 = 'userEmail';
-        this._NgModel_35_4.check_name(currVal_29, throwOnChange, false);
-        var currVal_30 = this.context.email;
-        this._NgModel_35_4.check_model(currVal_30, throwOnChange, false);
+        var currVal_30 = 'userEmail';
+        this._NgModel_35_4.check_name(currVal_30, throwOnChange, false);
+        var currVal_31 = this.context.email;
+        this._NgModel_35_4.check_model(currVal_31, throwOnChange, false);
         this._NgModel_35_4.detectChangesInternal(this, this._el_35, throwOnChange);
         this._NgControlStatus_35_6.detectChangesInternal(this, this._el_35, throwOnChange);
-        var currVal_37 = 'Ingrese su mail';
-        this._TextInput_35_7.check_placeholder(currVal_37, throwOnChange, false);
-        var currVal_38 = 'email';
-        this._TextInput_35_7.check_type(currVal_38, throwOnChange, false);
+        var currVal_38 = 'Ingrese su mail';
+        this._TextInput_35_7.check_placeholder(currVal_38, throwOnChange, false);
+        var currVal_39 = 'email';
+        this._TextInput_35_7.check_type(currVal_39, throwOnChange, false);
         this._TextInput_35_7.detectChangesInternal(this, this._el_35, throwOnChange);
         if (this._Item_38_4.detectChangesInternal(this, this._el_38, throwOnChange)) {
             this._appEl_38.componentView.markAsCheckOnce();
         }
         this._ItemContent_38_5.detectChangesInternal(this, this._el_38, throwOnChange);
-        var currVal_39 = 'primary';
-        this._Label_40_3.check_color(currVal_39, throwOnChange, false);
+        var currVal_40 = 'primary';
+        this._Label_40_3.check_color(currVal_40, throwOnChange, false);
         this._Label_40_3.detectChangesInternal(this, this._el_40, throwOnChange);
-        var currVal_41 = 'userPassword';
-        this._NgModel_43_4.check_name(currVal_41, throwOnChange, false);
-        var currVal_42 = this.context.password;
-        this._NgModel_43_4.check_model(currVal_42, throwOnChange, false);
+        var currVal_42 = 'userPassword';
+        this._NgModel_43_4.check_name(currVal_42, throwOnChange, false);
+        var currVal_43 = this.context.password;
+        this._NgModel_43_4.check_model(currVal_43, throwOnChange, false);
         this._NgModel_43_4.detectChangesInternal(this, this._el_43, throwOnChange);
         this._NgControlStatus_43_6.detectChangesInternal(this, this._el_43, throwOnChange);
-        var currVal_49 = 'Ingrese contraseña';
-        this._TextInput_43_7.check_placeholder(currVal_49, throwOnChange, false);
-        var currVal_50 = 'password';
-        this._TextInput_43_7.check_type(currVal_50, throwOnChange, false);
+        var currVal_50 = 'Ingrese contraseña';
+        this._TextInput_43_7.check_placeholder(currVal_50, throwOnChange, false);
+        var currVal_51 = 'password';
+        this._TextInput_43_7.check_type(currVal_51, throwOnChange, false);
         this._TextInput_43_7.detectChangesInternal(this, this._el_43, throwOnChange);
         this._List_47_3.detectChangesInternal(this, this._el_47, throwOnChange);
-        var currVal_52 = '';
-        this._Button_49_4.check_block(currVal_52, throwOnChange, false);
+        var currVal_53 = '';
+        this._Button_49_4.check_block(currVal_53, throwOnChange, false);
         if (this._Button_49_4.detectChangesInternal(this, this._el_49, throwOnChange)) {
             this._appEl_49.componentView.markAsCheckOnce();
         }
@@ -718,140 +721,140 @@ var _View_RegistroUsuarioPage0 = (function (_super) {
                 this._Button_49_4.context.ngAfterContentInit();
             }
         }
-        var currVal_0 = this._Navbar_3_4.context._hidden;
-        if (import4.checkBinding(throwOnChange, this._expr_0, currVal_0)) {
-            this.renderer.setElementProperty(this._el_3, 'hidden', currVal_0);
-            this._expr_0 = currVal_0;
-        }
-        var currVal_1 = this._Navbar_3_4.context._sbPadding;
+        var currVal_1 = this._Navbar_3_4.context._hidden;
         if (import4.checkBinding(throwOnChange, this._expr_1, currVal_1)) {
-            this.renderer.setElementClass(this._el_3, 'statusbar-padding', currVal_1);
+            this.renderer.setElementProperty(this._el_3, 'hidden', currVal_1);
             this._expr_1 = currVal_1;
         }
-        var currVal_2 = this._Content_10_4.context._sbPadding;
+        var currVal_2 = this._Navbar_3_4.context._sbPadding;
         if (import4.checkBinding(throwOnChange, this._expr_2, currVal_2)) {
-            this.renderer.setElementClass(this._el_10, 'statusbar-padding', currVal_2);
+            this.renderer.setElementClass(this._el_3, 'statusbar-padding', currVal_2);
             this._expr_2 = currVal_2;
         }
-        var currVal_7 = this._NgControlStatus_19_6.context.ngClassUntouched;
-        if (import4.checkBinding(throwOnChange, this._expr_7, currVal_7)) {
-            this.renderer.setElementClass(this._el_19, 'ng-untouched', currVal_7);
-            this._expr_7 = currVal_7;
+        var currVal_3 = this._Content_10_4.context._sbPadding;
+        if (import4.checkBinding(throwOnChange, this._expr_3, currVal_3)) {
+            this.renderer.setElementClass(this._el_10, 'statusbar-padding', currVal_3);
+            this._expr_3 = currVal_3;
         }
-        var currVal_8 = this._NgControlStatus_19_6.context.ngClassTouched;
+        var currVal_8 = this._NgControlStatus_19_6.context.ngClassUntouched;
         if (import4.checkBinding(throwOnChange, this._expr_8, currVal_8)) {
-            this.renderer.setElementClass(this._el_19, 'ng-touched', currVal_8);
+            this.renderer.setElementClass(this._el_19, 'ng-untouched', currVal_8);
             this._expr_8 = currVal_8;
         }
-        var currVal_9 = this._NgControlStatus_19_6.context.ngClassPristine;
+        var currVal_9 = this._NgControlStatus_19_6.context.ngClassTouched;
         if (import4.checkBinding(throwOnChange, this._expr_9, currVal_9)) {
-            this.renderer.setElementClass(this._el_19, 'ng-pristine', currVal_9);
+            this.renderer.setElementClass(this._el_19, 'ng-touched', currVal_9);
             this._expr_9 = currVal_9;
         }
-        var currVal_10 = this._NgControlStatus_19_6.context.ngClassDirty;
+        var currVal_10 = this._NgControlStatus_19_6.context.ngClassPristine;
         if (import4.checkBinding(throwOnChange, this._expr_10, currVal_10)) {
-            this.renderer.setElementClass(this._el_19, 'ng-dirty', currVal_10);
+            this.renderer.setElementClass(this._el_19, 'ng-pristine', currVal_10);
             this._expr_10 = currVal_10;
         }
-        var currVal_11 = this._NgControlStatus_19_6.context.ngClassValid;
+        var currVal_11 = this._NgControlStatus_19_6.context.ngClassDirty;
         if (import4.checkBinding(throwOnChange, this._expr_11, currVal_11)) {
-            this.renderer.setElementClass(this._el_19, 'ng-valid', currVal_11);
+            this.renderer.setElementClass(this._el_19, 'ng-dirty', currVal_11);
             this._expr_11 = currVal_11;
         }
-        var currVal_12 = this._NgControlStatus_19_6.context.ngClassInvalid;
+        var currVal_12 = this._NgControlStatus_19_6.context.ngClassValid;
         if (import4.checkBinding(throwOnChange, this._expr_12, currVal_12)) {
-            this.renderer.setElementClass(this._el_19, 'ng-invalid', currVal_12);
+            this.renderer.setElementClass(this._el_19, 'ng-valid', currVal_12);
             this._expr_12 = currVal_12;
         }
-        var currVal_19 = this._NgControlStatus_27_6.context.ngClassUntouched;
-        if (import4.checkBinding(throwOnChange, this._expr_19, currVal_19)) {
-            this.renderer.setElementClass(this._el_27, 'ng-untouched', currVal_19);
-            this._expr_19 = currVal_19;
+        var currVal_13 = this._NgControlStatus_19_6.context.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_13, currVal_13)) {
+            this.renderer.setElementClass(this._el_19, 'ng-invalid', currVal_13);
+            this._expr_13 = currVal_13;
         }
-        var currVal_20 = this._NgControlStatus_27_6.context.ngClassTouched;
+        var currVal_20 = this._NgControlStatus_27_6.context.ngClassUntouched;
         if (import4.checkBinding(throwOnChange, this._expr_20, currVal_20)) {
-            this.renderer.setElementClass(this._el_27, 'ng-touched', currVal_20);
+            this.renderer.setElementClass(this._el_27, 'ng-untouched', currVal_20);
             this._expr_20 = currVal_20;
         }
-        var currVal_21 = this._NgControlStatus_27_6.context.ngClassPristine;
+        var currVal_21 = this._NgControlStatus_27_6.context.ngClassTouched;
         if (import4.checkBinding(throwOnChange, this._expr_21, currVal_21)) {
-            this.renderer.setElementClass(this._el_27, 'ng-pristine', currVal_21);
+            this.renderer.setElementClass(this._el_27, 'ng-touched', currVal_21);
             this._expr_21 = currVal_21;
         }
-        var currVal_22 = this._NgControlStatus_27_6.context.ngClassDirty;
+        var currVal_22 = this._NgControlStatus_27_6.context.ngClassPristine;
         if (import4.checkBinding(throwOnChange, this._expr_22, currVal_22)) {
-            this.renderer.setElementClass(this._el_27, 'ng-dirty', currVal_22);
+            this.renderer.setElementClass(this._el_27, 'ng-pristine', currVal_22);
             this._expr_22 = currVal_22;
         }
-        var currVal_23 = this._NgControlStatus_27_6.context.ngClassValid;
+        var currVal_23 = this._NgControlStatus_27_6.context.ngClassDirty;
         if (import4.checkBinding(throwOnChange, this._expr_23, currVal_23)) {
-            this.renderer.setElementClass(this._el_27, 'ng-valid', currVal_23);
+            this.renderer.setElementClass(this._el_27, 'ng-dirty', currVal_23);
             this._expr_23 = currVal_23;
         }
-        var currVal_24 = this._NgControlStatus_27_6.context.ngClassInvalid;
+        var currVal_24 = this._NgControlStatus_27_6.context.ngClassValid;
         if (import4.checkBinding(throwOnChange, this._expr_24, currVal_24)) {
-            this.renderer.setElementClass(this._el_27, 'ng-invalid', currVal_24);
+            this.renderer.setElementClass(this._el_27, 'ng-valid', currVal_24);
             this._expr_24 = currVal_24;
         }
-        var currVal_31 = this._NgControlStatus_35_6.context.ngClassUntouched;
-        if (import4.checkBinding(throwOnChange, this._expr_31, currVal_31)) {
-            this.renderer.setElementClass(this._el_35, 'ng-untouched', currVal_31);
-            this._expr_31 = currVal_31;
+        var currVal_25 = this._NgControlStatus_27_6.context.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_25, currVal_25)) {
+            this.renderer.setElementClass(this._el_27, 'ng-invalid', currVal_25);
+            this._expr_25 = currVal_25;
         }
-        var currVal_32 = this._NgControlStatus_35_6.context.ngClassTouched;
+        var currVal_32 = this._NgControlStatus_35_6.context.ngClassUntouched;
         if (import4.checkBinding(throwOnChange, this._expr_32, currVal_32)) {
-            this.renderer.setElementClass(this._el_35, 'ng-touched', currVal_32);
+            this.renderer.setElementClass(this._el_35, 'ng-untouched', currVal_32);
             this._expr_32 = currVal_32;
         }
-        var currVal_33 = this._NgControlStatus_35_6.context.ngClassPristine;
+        var currVal_33 = this._NgControlStatus_35_6.context.ngClassTouched;
         if (import4.checkBinding(throwOnChange, this._expr_33, currVal_33)) {
-            this.renderer.setElementClass(this._el_35, 'ng-pristine', currVal_33);
+            this.renderer.setElementClass(this._el_35, 'ng-touched', currVal_33);
             this._expr_33 = currVal_33;
         }
-        var currVal_34 = this._NgControlStatus_35_6.context.ngClassDirty;
+        var currVal_34 = this._NgControlStatus_35_6.context.ngClassPristine;
         if (import4.checkBinding(throwOnChange, this._expr_34, currVal_34)) {
-            this.renderer.setElementClass(this._el_35, 'ng-dirty', currVal_34);
+            this.renderer.setElementClass(this._el_35, 'ng-pristine', currVal_34);
             this._expr_34 = currVal_34;
         }
-        var currVal_35 = this._NgControlStatus_35_6.context.ngClassValid;
+        var currVal_35 = this._NgControlStatus_35_6.context.ngClassDirty;
         if (import4.checkBinding(throwOnChange, this._expr_35, currVal_35)) {
-            this.renderer.setElementClass(this._el_35, 'ng-valid', currVal_35);
+            this.renderer.setElementClass(this._el_35, 'ng-dirty', currVal_35);
             this._expr_35 = currVal_35;
         }
-        var currVal_36 = this._NgControlStatus_35_6.context.ngClassInvalid;
+        var currVal_36 = this._NgControlStatus_35_6.context.ngClassValid;
         if (import4.checkBinding(throwOnChange, this._expr_36, currVal_36)) {
-            this.renderer.setElementClass(this._el_35, 'ng-invalid', currVal_36);
+            this.renderer.setElementClass(this._el_35, 'ng-valid', currVal_36);
             this._expr_36 = currVal_36;
         }
-        var currVal_43 = this._NgControlStatus_43_6.context.ngClassUntouched;
-        if (import4.checkBinding(throwOnChange, this._expr_43, currVal_43)) {
-            this.renderer.setElementClass(this._el_43, 'ng-untouched', currVal_43);
-            this._expr_43 = currVal_43;
+        var currVal_37 = this._NgControlStatus_35_6.context.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_37, currVal_37)) {
+            this.renderer.setElementClass(this._el_35, 'ng-invalid', currVal_37);
+            this._expr_37 = currVal_37;
         }
-        var currVal_44 = this._NgControlStatus_43_6.context.ngClassTouched;
+        var currVal_44 = this._NgControlStatus_43_6.context.ngClassUntouched;
         if (import4.checkBinding(throwOnChange, this._expr_44, currVal_44)) {
-            this.renderer.setElementClass(this._el_43, 'ng-touched', currVal_44);
+            this.renderer.setElementClass(this._el_43, 'ng-untouched', currVal_44);
             this._expr_44 = currVal_44;
         }
-        var currVal_45 = this._NgControlStatus_43_6.context.ngClassPristine;
+        var currVal_45 = this._NgControlStatus_43_6.context.ngClassTouched;
         if (import4.checkBinding(throwOnChange, this._expr_45, currVal_45)) {
-            this.renderer.setElementClass(this._el_43, 'ng-pristine', currVal_45);
+            this.renderer.setElementClass(this._el_43, 'ng-touched', currVal_45);
             this._expr_45 = currVal_45;
         }
-        var currVal_46 = this._NgControlStatus_43_6.context.ngClassDirty;
+        var currVal_46 = this._NgControlStatus_43_6.context.ngClassPristine;
         if (import4.checkBinding(throwOnChange, this._expr_46, currVal_46)) {
-            this.renderer.setElementClass(this._el_43, 'ng-dirty', currVal_46);
+            this.renderer.setElementClass(this._el_43, 'ng-pristine', currVal_46);
             this._expr_46 = currVal_46;
         }
-        var currVal_47 = this._NgControlStatus_43_6.context.ngClassValid;
+        var currVal_47 = this._NgControlStatus_43_6.context.ngClassDirty;
         if (import4.checkBinding(throwOnChange, this._expr_47, currVal_47)) {
-            this.renderer.setElementClass(this._el_43, 'ng-valid', currVal_47);
+            this.renderer.setElementClass(this._el_43, 'ng-dirty', currVal_47);
             this._expr_47 = currVal_47;
         }
-        var currVal_48 = this._NgControlStatus_43_6.context.ngClassInvalid;
+        var currVal_48 = this._NgControlStatus_43_6.context.ngClassValid;
         if (import4.checkBinding(throwOnChange, this._expr_48, currVal_48)) {
-            this.renderer.setElementClass(this._el_43, 'ng-invalid', currVal_48);
+            this.renderer.setElementClass(this._el_43, 'ng-valid', currVal_48);
             this._expr_48 = currVal_48;
+        }
+        var currVal_49 = this._NgControlStatus_43_6.context.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_49, currVal_49)) {
+            this.renderer.setElementClass(this._el_43, 'ng-invalid', currVal_49);
+            this._expr_49 = currVal_49;
         }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {

@@ -14,21 +14,23 @@ const SERVER_URL = 'http://api.corejob.cl/';
   templateUrl: 'page1.html'
 })
 export class Page1 {
-
-  usuario: string;
-  password: string;
+  data:any;
+  private mydata: any;
 
   constructor(public navCtrl: NavController,
               public http: Http,
-              public global: Global) {}
+              public global: Global) {
+                this.data = {};
+                this.data.usuario = "";
+                this.data.password = "";
+              }
 
   openPage(){
     this.navCtrl.push(RegistroUsuarioPage);
   }
 
   doLogin() {
-
-    let body = 'user[email]=' + this.usuario + '&user[password]=' + this.password;
+    let body = 'user[email]=' + this.data.usuario + '&user[password]=' + this.data.password;
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
     let options = new RequestOptions({ headers: headers });
 
@@ -38,8 +40,11 @@ export class Page1 {
         .subscribe(
             data => {
               console.log(data);
+              this.mydata = data;
               //this.global.setRegistrationIdVar(123456);
-              console.log(this.global.getRegistrationIdVar());
+              //console.log(this.global.getRegistrationIdVar());
+              this.data.usuario = "";
+              this.data.password = "";
               this.doRegistrationId(data.user);
               this.navCtrl.push(Page2, { userid: data.user, token: data.token});
             },

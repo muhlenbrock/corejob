@@ -30,6 +30,7 @@ posts: any;
     this.userid = navParams.get('userid');
     this.token = navParams.get('token');
     //alert(this.userid + "   " + this.token);
+    console.log("este es el usuario id: "+this.userid)
 
     let body = this.userid;
     let headers = new Headers({

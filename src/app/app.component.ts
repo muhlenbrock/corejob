@@ -10,6 +10,7 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { RegistroUsuarioPage } from '../pages/registro-usuario/registro-usuario';
 import { DetailPagePage } from '../pages/detail-page/detail-page';
+import { IntroPage } from '../pages/intro/intro';
 
 const SERVER_URL = 'http://api.corejob.cl/';
 
@@ -21,7 +22,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = IntroPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -36,7 +37,8 @@ export class MyApp {
       { title: 'Page One', component: Page1 },
       { title: 'Page Two', component: Page2 },
       { title: 'Registro Usuario', component: RegistroUsuarioPage },
-      { title: 'DetailPagePage', component: DetailPagePage}
+      { title: 'DetailPagePage', component: DetailPagePage},
+      { title: 'IntroPage', component: IntroPage}
     ];
 
 
@@ -69,7 +71,7 @@ export class MyApp {
               if (data.additionalData.foreground) {
                 // if application open, show popup
                 let confirmAlert = this.alertCtrl.create({
-                  title: data.title,
+                  title: 'Notificación',
                   message: data.message,
                   buttons: [{
                     text: 'Ignorar',
